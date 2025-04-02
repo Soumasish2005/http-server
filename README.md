@@ -57,6 +57,15 @@ The server accepts the following command-line argument:
 
 #### Start the Server
 ```bash
+# Compile the Java source code
+javac -d out src\main\java\Main.java
+
+# Create the JAR file
+jar cfe http-server.jar Main -C out .
+```
+
+```bash
+# Start the server
 java -jar http-server.jar --directory /path/to/directory
 ```
 
